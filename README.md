@@ -100,6 +100,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ![HomepageDark](doc/images/main_page_dark.png)
 ![HomepageLight](doc/images/main_page_light.png)
+![AddDocument](doc/images/add_document.png)
 ![HomepageFilters](doc/images/main_page_filters.png)
 ![SignIn](doc/images/signin.png)
 ![SignUp](doc/images/signup.png)
