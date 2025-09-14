@@ -1,4 +1,4 @@
-## Getting Started
+# Getting Started
 
 Stack: 
 
@@ -12,9 +12,9 @@ git clone <repo-url>
 cd docuckoo-beta
 ```
 
-### Database Setup (SQLite)
+## Database Setup (SQLite)
 
-## Windows
+###  Windows
 
 Download SQLite precompiled binaries:
 https://www.sqlite.org/download.html
@@ -27,7 +27,7 @@ Test installation:
 sqlite3 --version # Check the version
 ```
 
-## Linux / macOS
+### Linux / macOS
 
 ```bash
 # Linux
@@ -37,7 +37,7 @@ sudo apt install sqlite3
 brew install sqlite
 ```
 
-### Backend Setup
+## Backend Setup
 Requires Java 17+ installed.
 
 ```bash
@@ -47,7 +47,7 @@ Requires Java 17+ installed.
 
 Backend runs on http://localhost:8080
 
-### Frontend Setup
+## Frontend Setup
 
 Install dependencies:
 ```bash
