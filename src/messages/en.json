@@ -1,0 +1,52 @@
+{
+  "Columns": {
+    "actions_header": "Actions",
+    "actions_copy_document": "Copy Document",
+    "actions_show_details": "View document details",
+    "actions_delete_document": "Delete",
+    "actions_open_menu": "Open menu",
+    "column_header_title": "Title",
+    "columns_header_status": "Status"
+  },
+  "HomePage": {
+    "welcome_header": "Keep Track of Your Documents",
+    "disclaimer": "Stay on top of your document expirations and never miss an important deadline.",
+    "get_started": "Start tracking your documents today and simplify your workflow. Open Source. Open Code.",
+    "avatar_sign_out": "Sign Out",
+    "avatar_billing": "Billing",
+    "avatar_settings": "Settings",
+    "avatar_profile": "Profile"
+  },
+  "AuthComponent":
+  {
+    "welcome": "Welcome",
+    "create_account_welcome": "Create Your Docuckoo Account",
+    "enter_credentials": "Enter your credentials to access your Docuckoo account",
+    "email": "Email",
+    "password": "Password",
+    "password_placeholder": "Enter your password",
+    "confirm_password_placeholder": "Confirm password",
+    "email_placeholder": "docuckoo@user.com",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot your password?",
+    "or_continue": "or continue with",
+    "github": "Continue with GitHub",
+    "google": "Continue with Google",
+    "dont_have_account": "Don't have an account?",
+    "have_account": "Already have an Docuckoo Account?",
+    "sign_up": "Sign up",
+    "sign_in": "Sign In",
+    "signing_in": "Signing In",
+    "last_name": "Last Name",
+    "first_name": "First Name",
+    "last_name_placeholder": "Your last name",
+    "first_name_placeholder": "Your first name",
+    "this_will_be_your_account": "This will be Your Docuckoo Account",
+    "continue_registration": "Continue",
+    "select_country_and_region": "Please select your country and region",
+    "explain_country_and_region": "Please select your country and region so we can determine your UTC time zone for accurate notification delivery.",
+    "enter_email": "Please enter your email",
+    "all_fields_required": "Please fill out all fields marked withd `*`.",
+    "valid_email_required": "Please enter a valid email address."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "HomePage": {
+    "welcome_header": "Kövesse nyomon dokumentumait",
+    "disclaimer": "Maradjon naprakész a dokumentumok lejáratával kapcsolatban, és soha ne mulasszon el egy fontos határidőt sem.",
+    "get_started": "Kezdje el ma követni dokumentumait, és egyszerűsítse munkafolyamatát. Nyílt forráskód. Nyílt hozzáférés."
+  },
+  "AuthComponent": {
+    "welcome": "Üdvözöljük",
+    "create_account_welcome": "Hozza létre Docuckoo fiókját",
+    "enter_credentials": "Adja meg a belépési adatait a Docuckoo fiókhoz",
+    "email": "Email",
+    "password": "Jelszó",
+    "password_placeholder": "Adja meg jelszavát",
+    "confirm_password_placeholder": "Erősítse meg a jelszót",
+    "email_placeholder": "docuckoo@user.com",
+    "remember_me": "Emlékezz rám",
+    "forgot_password": "Elfelejtette jelszavát?",
+    "or_continue": "vagy folytassa ezzel",
+    "github": "Folytatás GitHub-bal",
+    "google": "Folytatás Google-lel",
+    "dont_have_account": "Nincs fiókja?",
+    "have_account": "Már van Docuckoo fiókja?",
+    "sign_up": "Regisztráció",
+    "sign_in": "Bejelentkezés",
+    "last_name": "Vezetéknév",
+    "first_name": "Keresztnév",
+    "last_name_placeholder": "Adja meg vezetéknevét",
+    "first_name_placeholder": "Adja meg keresztnevét",
+    "this_will_be_your_account": "Ez lesz a Docuckoo fiókja",
+    "continue_registration": "Folytatás",
+    "select_country_and_region": "Kérjük, válassza ki az országot és a régiót",
+    "explain_country_and_region": "Kérjük, válassza ki az országot és régiót, hogy meghatározhassuk az Ön időzónáját a pontos értesítésekhez.",
+    "enter_email": "Adja meg email címét",
+    "all_fields_required": "Kérjük, töltse ki az összes `*`-gal jelölt mezőt.",
+    "valid_email_required": "Kérjük, adjon meg érvényes email címet."
+  }
+}
