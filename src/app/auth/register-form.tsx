@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ArrowUpRight, Eye, EyeOff, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import CountrySelect from "@/components/ui/country";
@@ -10,6 +10,10 @@ import RegionSelect from "@/components/ui/region";
 import { useState } from "react";
 import { GitHubIcon } from "@/components/icons/githubIcon";
 import isEmail from 'validator/lib/isEmail';
+import { AxiosResponse } from "axios";
+import AuthService from "../services/authService";
+import { useRouter } from 'next/navigation';
+
 
 interface RegisterFormProps {
   onSwitch: () => void;
@@ -18,7 +22,9 @@ interface RegisterFormProps {
 
 export default function RegisterForm({ onClose, onSwitch }: RegisterFormProps) {
   const t = useTranslations('AuthComponent');
-
+  const locale = useLocale();
+  const router = useRouter();
+  
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [selectedCountry, setSelectedCountry] = useState('');
@@ -31,6 +37,9 @@ export default function RegisterForm({ onClose, onSwitch }: RegisterFormProps) {
 
   const [error, setError] = useState<string | null>(null);
   const [errorFields, setErrorFields] = useState<{[key: string]: boolean}>({});
+  const authService: AuthService = new AuthService();
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validate = () => {
     const newErrors: { [key: string]: boolean } = {};
@@ -61,11 +70,37 @@ export default function RegisterForm({ onClose, onSwitch }: RegisterFormProps) {
     return !hasError;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    console.log("Registered:", { firstName, lastName, selectedCountry, selectedRegion, email, pass });
+
+    setIsSubmitting(true);
+
+    try {
+      const success: AxiosResponse = await authService.signupUser({
+        userName: firstName.concat(' ', lastName),
+        userEmail: email,
+        userPassword: pass
+      });
+
+      if (success.status === 200){
+        const login: AxiosResponse = await authService.signinUser({
+          userEmail: email,
+          userPassword: pass 
+        });
+
+        if (login.status === 200){
+          router.push(`/${locale}/home`);
+        }
+      }
+    } catch (err) {
+      console.error(err);
+      setError(t('registration_failed'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   const clearError = (field: string, value: string) => {
     if (value.trim() !== '' && errorFields[field]) {
@@ -257,8 +292,12 @@ export default function RegisterForm({ onClose, onSwitch }: RegisterFormProps) {
 
             {/* Buttons */}
             <div className="flex justify-end gap-3 pt-4">
-              <Button type="submit" className="px-4 py-2 h-11  w-full">
-                {t('continue_registration')}
+              <Button
+                type="submit"
+                className="px-4 py-2 h-11 w-full"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? t('registering') : t('continue_registration')}
               </Button>
             </div>
           </form>

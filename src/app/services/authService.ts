@@ -9,11 +9,34 @@ export interface SignInCredentials {
   userPassword: string;
 }
 
+export interface SignUpCredentials {
+    userName: string,
+    userEmail: string,
+    userPassword: string
+}
+
 export default class AuthService {
 
     async signinUser(creds: SignInCredentials) {
         const res = await axios.post(
             `${API_URL}/signin`,
+            creds,
+            {
+                withCredentials: true,
+                timeout: 10000,
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                }
+            });
+            
+        return res;
+    }
+
+    async signupUser(creds: SignUpCredentials) {
+
+        const res = await axios.post(
+            `${API_URL}/signup`,
             creds,
             {
                 withCredentials: true,
