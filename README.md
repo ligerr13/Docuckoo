@@ -12,6 +12,31 @@ git clone <repo-url>
 cd docuckoo-beta
 ```
 
+### Database Setup (SQLite)
+
+## Windows
+
+Download SQLite precompiled binaries:
+https://www.sqlite.org/download.html
+
+Extract to a folder (e.g., C:\sqlite) and add it to your Windows PATH.
+
+Test installation:
+
+```bash
+sqlite3 --version # Check the version
+```
+
+## Linux / macOS
+
+```bash
+# Linux
+sudo apt install sqlite3
+
+# macOS
+brew install sqlite
+```
+
 ### Backend Setup
 Requires Java 17+ installed.
 
