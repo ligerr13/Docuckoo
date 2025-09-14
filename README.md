@@ -1,5 +1,7 @@
 #  Disclaimer
 
+**Docuckoo** is a **Document Expiry Tracker**.
+
 This project is **nowhere near finished** and should **not** be used in production.
 Its main purpose is **learning and experimentation**.  
 It may contain **bugs** and **unfinished placeholder features**.  
