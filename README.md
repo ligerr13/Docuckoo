@@ -1,3 +1,11 @@
+#  Disclaimer
+
+This project is **nowhere near finished** and should **not** be used in production.
+Its main purpose is **learning and experimentation**.  
+It may contain **bugs** and **unfinished placeholder features**.  
+
+Use it at your own risk.
+
 # Getting Started
 
 Stack: 
