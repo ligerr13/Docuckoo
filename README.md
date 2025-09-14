@@ -18,8 +18,8 @@ Stack:
 Clone the repository:
 
 ```bash
-git clone <repo-url>
-cd docuckoo-beta
+git clone https://github.com/ligerr13/Docuckoo.git
+cd Docuckoo
 ```
 
 ## Database Setup (SQLite)
